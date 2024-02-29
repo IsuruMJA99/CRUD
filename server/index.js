@@ -11,6 +11,12 @@ app.use(express.json())
 
 mongoose.connect("mongodb://127.0.0.1:27017/crud")
 
+app.get('/',(req, res)=>{
+    UserModel.find({})
+    .then(Users => res.json(Users))
+    .catch(err => res.json(err)) 
+})
+
 app.post("/createUser", (req ,res)=>{
     UserModel.create(req.body)
     .then(Users=> res.json(Users))
