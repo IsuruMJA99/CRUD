@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import './user.css'
 import axios from 'axios'
 
 const Users = () => {
@@ -21,7 +22,7 @@ const handleDelete =(id)=>{
     return (
         <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
           <div className='w-50 bg-white rounded p-3' >
-            <Link to ="/create" className='btn btn-success'>Add +</Link>
+            <Link to ="/create" className='btn btn-success'  >Add +</Link>
             <table className='table'>
                 <thead>
                     <tr>
@@ -40,10 +41,10 @@ const handleDelete =(id)=>{
                                 <td>{user.email}</td>
                                 <td>{user.age}</td>
                                 <td>
-                                <Link to = {`/Update/${user._id}`} className='btn btn-success'>Update</Link>
+                                <Link to = {`/Update/${user._id}`} className='btn btn-success' >Update</Link>
                                     <button className='btn btn-danger' 
                                     onClick={(e)=> handleDelete(user._id)} >Delete </button>
-                                    
+                                    {/* style={{ marginLeft: '20px' }} */}
                                 </td>
                             </tr>
                         })
