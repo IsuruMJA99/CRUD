@@ -29,7 +29,7 @@ const handleDelete =(id)=>{
                         <th>Name</th>
                         <th>Email</th>
                         <th>Age</th>
-                        <th>Action</th>
+                        <th style={{ paddingLeft: '60px' }}>Action</th>
                     </tr>
                 </thead>
                 <tbody>

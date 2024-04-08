@@ -1,4 +1,11 @@
 .btn-success{
-    margin-right: 20;
+    margin-right: 20px;
     padding: 20px;
 }
+
+.Action_col{
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
